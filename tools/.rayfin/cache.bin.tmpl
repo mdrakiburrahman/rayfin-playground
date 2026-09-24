@@ -1,0 +1,32 @@
+{
+  "Account": {
+    "{{HOME_ACCOUNT_ID}}.{{TENANT_ID}}-login.windows.net-{{TENANT_ID}}": {
+      "home_account_id": "{{HOME_ACCOUNT_ID}}.{{TENANT_ID}}",
+      "environment": "login.windows.net",
+      "realm": "{{TENANT_ID}}",
+      "local_account_id": "{{HOME_ACCOUNT_ID}}",
+      "username": "{{USER_PRINCIPAL_NAME}}",
+      "authority_type": "MSSTS",
+      "name": "{{USER_NAME}}",
+      "client_info": "{{CLIENT_INFO}}"
+    }
+  },
+  "IdToken": {},
+  "AccessToken": {
+    "{{HOME_ACCOUNT_ID}}.{{TENANT_ID}}-login.windows.net-accesstoken-{{RAYFIN_CLIENT_ID}}-{{TENANT_ID}}-{{FABRIC_SCOPES}}-": {
+      "home_account_id": "{{HOME_ACCOUNT_ID}}.{{TENANT_ID}}",
+      "environment": "login.windows.net",
+      "credential_type": "AccessToken",
+      "client_id": "{{RAYFIN_CLIENT_ID}}",
+      "secret": "{{ACCESS_TOKEN}}",
+      "realm": "{{TENANT_ID}}",
+      "target": "{{FABRIC_SCOPES}}",
+      "cached_at": "{{CACHED_AT}}",
+      "expires_on": "{{EXPIRES_ON}}",
+      "extended_expires_on": "{{EXPIRES_ON}}",
+      "token_type": "Bearer"
+    }
+  },
+  "RefreshToken": {},
+  "AppMetadata": {}
+}

@@ -1,0 +1,7 @@
+node_modules/
+npm-debug.log*
+dist/
+.env
+
+# Real ~/.rayfin snapshot (live credentials) — never commit.
+tools/.rayfin/.local/
