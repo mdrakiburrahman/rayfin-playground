@@ -42,3 +42,20 @@ That uses your JWT and this thing to deploy to Fabric:
 See [`tools/.rayfin/README.md`](tools/.rayfin/README.md) for where the
 workspace config and MSAL credentials are stored on disk, and an
 experimental `az`-login-based token injection approach.
+
+## Real Semantic Model
+
+[Tutorial](https://learn.microsoft.com/en-us/fabric/apps/data-apps-template)
+
+> `TODO`
+
+## Dev and Prod workflows
+
+[Manual crappy tutorial](https://learn.microsoft.com/en-us/fabric/apps/dev-prod-workflow)
+[GitHub Action tutorial](https://learn.microsoft.com/en-us/fabric/apps/deploy-github-actions)
+
+> `TODO`
+
+## Fabricator
+
+[Tool thing](https://github.com/spatney/rayfin-fabricator)
