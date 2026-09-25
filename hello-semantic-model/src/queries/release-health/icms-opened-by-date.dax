@@ -1,0 +1,8 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        /* REPORT_FILTER */
+        "ICMs Opened", [ICMs Opened]
+    )
+ORDER BY
+    'Date'[date] ASC

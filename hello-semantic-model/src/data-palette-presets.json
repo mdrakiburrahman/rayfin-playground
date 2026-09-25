@@ -1,0 +1,94 @@
+{
+  "palettes": [
+    {
+      "id": "oceanic-signal",
+      "name": "Oceanic signal",
+      "colors": {
+        "light": [
+          "#116B75",
+          "#3157A4",
+          "#6B45A8",
+          "#9B3F75",
+          "#A04C32",
+          "#7A6418",
+          "#33703F",
+          "#0C6E5C",
+          "#46627A",
+          "#76536A"
+        ],
+        "dark": [
+          "#46C3D0",
+          "#7EA2F8",
+          "#B69AF4",
+          "#E486B8",
+          "#E99171",
+          "#DFC75B",
+          "#75CA85",
+          "#4CC9A8",
+          "#8BA9C2",
+          "#C69AB5"
+        ]
+      }
+    },
+    {
+      "id": "incident-response",
+      "name": "Incident response",
+      "colors": {
+        "light": [
+          "#176B4D",
+          "#B22E3E",
+          "#A35B00",
+          "#225DB4",
+          "#7342A6",
+          "#0E7184",
+          "#8B3B69",
+          "#536B11",
+          "#684E1C",
+          "#394A65"
+        ],
+        "dark": [
+          "#56D7A0",
+          "#FF8090",
+          "#F8BD57",
+          "#77A9FF",
+          "#BF9AF2",
+          "#5DD4E5",
+          "#F28BC2",
+          "#B2DB65",
+          "#D7B270",
+          "#91A9CD"
+        ]
+      }
+    },
+    {
+      "id": "quiet-spectrum",
+      "name": "Quiet spectrum",
+      "colors": {
+        "light": [
+          "#356D62",
+          "#5367A7",
+          "#76558E",
+          "#92566B",
+          "#8A623B",
+          "#56713E",
+          "#2E6D7B",
+          "#665B9D",
+          "#85517F",
+          "#4C6671"
+        ],
+        "dark": [
+          "#78C7B7",
+          "#92A6E9",
+          "#B69BD0",
+          "#D49AAA",
+          "#CFAD7B",
+          "#9DC27E",
+          "#73BED0",
+          "#AFA4DD",
+          "#CB9DBE",
+          "#8EB1BF"
+        ]
+      }
+    }
+  ]
+}

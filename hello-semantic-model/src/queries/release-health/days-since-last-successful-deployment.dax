@@ -1,0 +1,10 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Service Group'[service_group_short],
+        'Deployment Environment'[environment_name],
+        /* REPORT_FILTER */
+        "Days Since Last Successful Deployment", [Days Since Last Successful Deployment]
+    )
+ORDER BY
+    'Service Group'[service_group_short] ASC,
+    'Deployment Environment'[environment_name] ASC

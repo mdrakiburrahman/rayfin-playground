@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "transform": [
+    {
+      "calculate": "datum.ServiceGroup + ' · ' + datum.RolloutInfrastructure",
+      "as": "ServiceInfrastructure"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Region",
+      "type": "nominal",
+      "title": "Region",
+      "axis": {
+        "labelAngle": -45,
+        "labelLimit": 120
+      }
+    },
+    "y": {
+      "field": "ServiceInfrastructure",
+      "type": "nominal",
+      "title": "Service group · rollout infrastructure",
+      "sort": null,
+      "axis": {
+        "labelLimit": 220
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "AverageVersionsBehind",
+          "type": "quantitative",
+          "title": "Average versions behind",
+          "scale": {
+            "scheme": "yelloworangered"
+          },
+          "legend": {
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "ServiceGroup",
+            "type": "nominal",
+            "title": "Service group"
+          },
+          {
+            "field": "RolloutInfrastructure",
+            "type": "nominal",
+            "title": "Rollout infrastructure"
+          },
+          {
+            "field": "Region",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "AverageVersionsBehind",
+            "type": "quantitative",
+            "title": "Average versions behind"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text"
+      },
+      "encoding": {
+        "text": {
+          "field": "AverageVersionsBehind",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
+    }
+  ]
+}

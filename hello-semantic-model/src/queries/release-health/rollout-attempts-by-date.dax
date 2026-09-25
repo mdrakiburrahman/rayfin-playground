@@ -1,0 +1,12 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        FILTER(
+            ALL('Date'[date]),
+            NOT ISBLANK('Date'[date])
+        ),
+        /* REPORT_FILTER */
+        "Rollout Attempts", [Rollout Attempts]
+    )
+ORDER BY
+    'Date'[date] ASC

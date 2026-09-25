@@ -47,7 +47,13 @@ experimental `az`-login-based token injection approach.
 
 [Tutorial](https://learn.microsoft.com/en-us/fabric/apps/data-apps-template)
 
-> `TODO`
+```bash
+cd /workspaces/rayfin-playground
+npm create @microsoft/rayfin@latest -- "hello-semantic-model" --template dataapp --workspace-id "b6d561c2-5df2-4161-90ef-2b1532ab6642"
+
+cd hello-semantic-model
+npx rayfin dev
+```
 
 ## Dev and Prod workflows
 

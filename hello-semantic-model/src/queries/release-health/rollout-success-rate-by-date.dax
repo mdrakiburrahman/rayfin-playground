@@ -1,0 +1,8 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        /* REPORT_FILTER */
+        "Rollout Success Rate", [Rollout Success Rate]
+    )
+ORDER BY
+    'Date'[date] ASC

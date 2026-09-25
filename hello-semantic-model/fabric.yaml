@@ -1,0 +1,7 @@
+activeProfile: default
+profiles:
+  default:
+    semanticModels:
+      releaseHealth:
+        workspaceId: b6d561c2-5df2-4161-90ef-2b1532ab6642
+        itemId: 6ea1c83a-94d9-499f-89c0-7f8463330e47

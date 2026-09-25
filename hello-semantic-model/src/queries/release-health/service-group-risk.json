@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "ServiceGroup",
+      "type": "nominal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelLimit": 150
+      }
+    },
+    "x": {
+      "field": "FailedRollouts",
+      "type": "quantitative",
+      "title": "Failed rollouts"
+    },
+    "tooltip": [
+      {
+        "field": "ServiceGroup",
+        "type": "nominal",
+        "title": "Service group"
+      },
+      {
+        "field": "EngineeringManager",
+        "type": "nominal",
+        "title": "Engineering manager"
+      },
+      {
+        "field": "RolloutAttempts",
+        "type": "quantitative",
+        "title": "Rollout attempts"
+      },
+      {
+        "field": "FailedRollouts",
+        "type": "quantitative",
+        "title": "Failed rollouts"
+      },
+      {
+        "field": "RolloutSuccessRate",
+        "type": "quantitative",
+        "title": "Success rate"
+      },
+      {
+        "field": "StepFailures",
+        "type": "quantitative",
+        "title": "Step failures"
+      },
+      {
+        "field": "DaysSinceLastSuccessfulDeployment",
+        "type": "quantitative",
+        "title": "Days since last success"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 6
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelHorizontal"
+      },
+      "encoding": {
+        "text": {
+          "field": "FailedRollouts",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

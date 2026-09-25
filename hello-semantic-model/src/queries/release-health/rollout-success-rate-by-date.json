@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "transform": [
+    {
+      "calculate": "timeFormat(toDate(datum.Date), '%b %d')",
+      "as": "DateLabel"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "DateLabel",
+      "type": "ordinal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelAngle": -45,
+        "labelOverlap": "greedy"
+      }
+    },
+    "y": {
+      "field": "RolloutSuccessRate",
+      "type": "quantitative",
+      "title": "Rollout success rate"
+    },
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "RolloutSuccessRate",
+        "type": "quantitative",
+        "title": "Rollout success rate"
+      }
+    ]
+  }
+}

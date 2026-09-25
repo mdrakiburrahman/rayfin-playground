@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "Region",
+      "type": "nominal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelLimit": 125
+      }
+    },
+    "x": {
+      "field": "AverageVersionsBehind",
+      "type": "quantitative",
+      "title": "Average versions behind"
+    },
+    "tooltip": [
+      {
+        "field": "Region",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "AverageVersionsBehind",
+        "type": "quantitative",
+        "title": "Average versions behind"
+      },
+      {
+        "field": "WorstVersionsBehind",
+        "type": "quantitative",
+        "title": "Worst versions behind"
+      },
+      {
+        "field": "DriftedDeployments",
+        "type": "quantitative",
+        "title": "Drifted deployments"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 6
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelHorizontal"
+      },
+      "encoding": {
+        "text": {
+          "field": "AverageVersionsBehind",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

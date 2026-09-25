@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "x": {
+      "field": "Environment",
+      "type": "nominal",
+      "title": "Environment",
+      "axis": {
+        "labelAngle": -45
+      }
+    },
+    "y": {
+      "field": "ServiceGroup",
+      "type": "nominal",
+      "title": "Service group",
+      "sort": null,
+      "axis": {
+        "labelLimit": 200
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "DaysSinceLastSuccessfulDeployment",
+          "type": "quantitative",
+          "title": "Days since last success",
+          "scale": {
+            "scheme": "yelloworangered"
+          },
+          "legend": {
+            "orient": "right"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "ServiceGroup",
+            "type": "nominal",
+            "title": "Service group"
+          },
+          {
+            "field": "Environment",
+            "type": "nominal",
+            "title": "Environment"
+          },
+          {
+            "field": "DaysSinceLastSuccessfulDeployment",
+            "type": "quantitative",
+            "title": "Days since last success"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text"
+      },
+      "encoding": {
+        "text": {
+          "field": "DaysSinceLastSuccessfulDeployment",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

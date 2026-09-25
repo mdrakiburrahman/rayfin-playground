@@ -1,0 +1,9 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        /* REPORT_FILTER */
+        "Step Runs", [Step Runs],
+        "Step Failures", [Step Failures]
+    )
+ORDER BY
+    'Date'[date] ASC

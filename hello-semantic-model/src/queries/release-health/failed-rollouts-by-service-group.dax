@@ -1,0 +1,10 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        'Service Group'[service_group_short],
+        /* REPORT_FILTER */
+        "Failed Rollouts", [Failed Rollouts]
+    )
+ORDER BY
+    'Date'[date] ASC,
+    'Service Group'[service_group_short] ASC

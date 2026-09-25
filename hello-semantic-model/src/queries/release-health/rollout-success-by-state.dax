@@ -1,0 +1,10 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        'Rollout State'[is_success],
+        /* REPORT_FILTER */
+        "Daily Rollout Count", [Daily Rollout Count]
+    )
+ORDER BY
+    'Date'[date] ASC,
+    'Rollout State'[is_success] DESC

@@ -1,0 +1,29 @@
+DEFINE
+    VAR _Core =
+        SUMMARIZECOLUMNS(
+            'Service Group'[service_group_short],
+            'Deployment Freshness'[environment],
+            'Service Group'[primary_owner_alias],
+            'Deployment Freshness'[last_success_rollout_url],
+            /* REPORT_FILTER */
+            "Days Since Last Successful Deployment", [Days Since Last Successful Deployment],
+            "Rollout Attempts", [Rollout Attempts],
+            "Rollout Success Rate", [Rollout Success Rate],
+            "Step Failures", [Step Failures],
+            "Step Failure Rate", [Step Failure Rate]
+        )
+    VAR _Rows =
+        TOPN(
+            100,
+            _Core,
+            [Days Since Last Successful Deployment], DESC,
+            'Service Group'[service_group_short], ASC,
+            'Deployment Freshness'[environment], ASC
+        )
+
+EVALUATE
+    _Rows
+ORDER BY
+    [Days Since Last Successful Deployment] DESC,
+    'Service Group'[service_group_short] ASC,
+    'Deployment Freshness'[environment] ASC

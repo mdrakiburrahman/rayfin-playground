@@ -1,0 +1,12 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Service Group'[service_group_short],
+        'Regional Deployment'[rollout_infra],
+        'Regional Deployment'[region],
+        /* REPORT_FILTER */
+        "Average Versions Behind", [Average Versions Behind]
+    )
+ORDER BY
+    'Service Group'[service_group_short] ASC,
+    'Regional Deployment'[rollout_infra] ASC,
+    'Regional Deployment'[region] ASC

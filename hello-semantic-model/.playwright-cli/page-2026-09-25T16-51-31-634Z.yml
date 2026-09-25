@@ -1,0 +1,82 @@
+- generic [ref=f13e3]:
+  - banner [ref=f13e4]:
+    - generic [ref=f13e5]:
+      - generic [ref=f13e10]:
+        - paragraph [ref=f13e11]: Release Health
+        - paragraph [ref=f13e12]: HybridRelease + EV2
+      - navigation "Report pages" [ref=f13e13]:
+        - link "Overview" [ref=f13e14] [cursor=pointer]:
+          - /url: "#overview"
+        - link "Failures" [ref=f13e15] [cursor=pointer]:
+          - /url: "#failures"
+      - generic [ref=f13e16]:
+        - button "Refresh release health data" [ref=f13e17]
+        - button "Switch to dark mode" [ref=f13e23]
+  - main [ref=f13e26]:
+    - generic [ref=f13e27]:
+      - generic [ref=f13e28]:
+        - paragraph [ref=f13e29]: HybridRelease + EV2
+        - heading "Release Health" [level=1] [ref=f13e30]
+        - paragraph [ref=f13e31]: Report-scoped service groups · Data through latest refresh
+      - generic [ref=f13e32]:
+        - generic [ref=f13e33]: — rollout attempts
+        - generic [ref=f13e34]: — in flight
+    - generic [ref=f13e35]:
+      - article [ref=f13e36]:
+        - paragraph [ref=f13e39]: Rollout success rate
+        - paragraph [ref=f13e45]: — successful of — attempts
+      - article [ref=f13e46]:
+        - paragraph [ref=f13e48]: Failed rollouts
+      - article [ref=f13e55]:
+        - paragraph [ref=f13e57]: Awaiting mitigation
+      - article [ref=f13e65]:
+        - paragraph [ref=f13e67]: Freshness breaches
+      - article [ref=f13e74]:
+        - paragraph [ref=f13e76]: Step failure rate
+    - generic [ref=f13e85]:
+      - generic [ref=f13e86]:
+        - generic [ref=f13e87]:
+          - paragraph [ref=f13e88]: Power BI page
+          - heading "Overview" [level=2] [ref=f13e89]
+        - generic [ref=f13e90]: 9 visuals
+      - generic [ref=f13e91]:
+        - region "Loading Rollout Attempts by date" [ref=f13e93]:
+          - generic [ref=f13e94]: Daily rollout attempts
+        - region "Loading Rollout Success Rate by date" [ref=f13e100]:
+          - generic [ref=f13e101]: Daily successful rollouts divided by rollout attempts
+        - region "Loading Successful Rollouts and Failed Rollouts by date" [ref=f13e107]:
+          - generic [ref=f13e108]: Daily successful and failed rollout counts
+        - region "Loading Successful Rollouts by Service Group" [ref=f13e114]:
+          - generic [ref=f13e115]: Daily successful rollouts with service group color legend
+        - region "Loading Failed Rollouts by Service Group" [ref=f13e121]:
+          - generic [ref=f13e122]: Daily failed rollouts with service group color legend
+        - region "Loading Deployed Environment" [ref=f13e128]:
+          - generic [ref=f13e129]: Successful rollouts by deployment environment
+        - region "Loading Success?" [ref=f13e135]:
+          - generic [ref=f13e136]: Daily rollout count by success state
+        - region "Loading Versions behind by region" [ref=f13e142]:
+          - generic [ref=f13e143]: Service group and rollout infrastructure by region
+        - region "Loading Days since last successful deployment" [ref=f13e149]:
+          - generic [ref=f13e150]: Service group by environment
+    - generic [ref=f13e155]:
+      - generic [ref=f13e156]:
+        - generic [ref=f13e157]:
+          - paragraph [ref=f13e158]: Power BI page
+          - heading "Failures" [level=2] [ref=f13e159]
+        - generic [ref=f13e160]: 5 visuals
+      - generic [ref=f13e161]:
+        - region "Loading Step Runs and Step Failures by date" [ref=f13e163]:
+          - generic [ref=f13e164]: Daily deployment step runs and failures
+        - region "Loading ICMs Opened by date" [ref=f13e170]:
+          - generic [ref=f13e171]: Daily ICMs opened
+        - region "Loading Failed deployment steps per day, by service group" [ref=f13e177]:
+          - generic [ref=f13e178]: Daily step failures with service group color legend
+        - region "Loading Staleness leaderboard - worst service group and cloud pairs" [ref=f13e184]:
+          - generic [ref=f13e185]: Sorted by days since last successful deployment
+        - region "Loading Most failure-prone deployment steps" [ref=f13e191]:
+          - generic [ref=f13e192]: Deployment step, service group, duration, runs, failures, and failure rate
+    - generic [ref=f13e197]:
+      - paragraph [ref=f13e198]: "Data source: Release Health semantic model · Service-group filter matches the Release Health 360 report."
+      - generic [ref=f13e199]:
+        - generic [ref=f13e203]: "Latest model date: loading"
+        - generic [ref=f13e208]: — avg versions behind

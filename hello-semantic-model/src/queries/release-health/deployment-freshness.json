@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "ServiceGroup",
+      "type": "nominal",
+      "title": null,
+      "sort": null
+    },
+    "x": {
+      "field": "DaysSinceLastSuccessfulDeployment",
+      "type": "quantitative",
+      "title": "Days since last successful deployment"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 6
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelHorizontal"
+      },
+      "encoding": {
+        "text": {
+          "field": "DaysSinceLastSuccessfulDeployment",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

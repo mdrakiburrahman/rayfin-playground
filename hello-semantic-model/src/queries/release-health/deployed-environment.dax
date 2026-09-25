@@ -1,0 +1,10 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        'Date'[date],
+        'Deployment Environment'[environment],
+        /* REPORT_FILTER */
+        "Successful Rollouts", [Successful Rollouts]
+    )
+ORDER BY
+    'Date'[date] ASC,
+    'Deployment Environment'[environment] ASC

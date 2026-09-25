@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "layer": [
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelCallout",
+        "limit": {
+          "expr": "width"
+        }
+      },
+      "encoding": {
+        "text": {
+          "field": "RolloutSuccessRate",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelSubtitle",
+        "limit": {
+          "expr": "width"
+        }
+      },
+      "encoding": {
+        "text": {
+          "value": "Rollout success rate"
+        }
+      }
+    }
+  ]
+}

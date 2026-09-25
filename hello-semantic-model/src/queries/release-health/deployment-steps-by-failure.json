@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "DeploymentStep",
+      "type": "nominal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelLimit": 170
+      }
+    },
+    "x": {
+      "field": "StepFailures",
+      "type": "quantitative",
+      "title": "Step failures"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 6
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "style": "labelHorizontal"
+      },
+      "encoding": {
+        "text": {
+          "field": "StepFailures",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

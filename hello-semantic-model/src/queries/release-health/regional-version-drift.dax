@@ -1,0 +1,62 @@
+DEFINE
+    VAR _ServiceGroupFilter =
+        TREATAS(
+            {
+                "Microsoft.Azure.HybridData.AdxProxy",
+                "Microsoft.Azure.HybridData.Alerts",
+                "Microsoft.Azure.HybridData.AppTelemetry.CoreInfra",
+                "Microsoft.Azure.HybridData.ARNIngestion",
+                "Microsoft.Azure.HybridData.ControlPlane",
+                "Microsoft.Azure.HybridData.HaaS",
+                "Microsoft.Azure.HybridData.ImageReplication",
+                "Microsoft.Azure.HybridData.InventoryManagement",
+                "Microsoft.Azure.HybridData.LoadTest",
+                "Microsoft.Azure.HybridData.MigrationServices",
+                "Microsoft.Azure.HybridData.MirrorMaker",
+                "Microsoft.Azure.HybridData.Onboarding",
+                "Microsoft.Azure.HybridData.OneMonitoring.TelemetryCollector",
+                "Microsoft.Azure.HybridData.RegionalCore",
+                "Microsoft.Azure.HybridData.RegionalCore.AppTelemetry.ClusterInternal",
+                "Microsoft.Azure.HybridData.ReleaseOperationsTest",
+                "Microsoft.Azure.HybridData.ResourceProvider",
+                "Microsoft.Azure.HybridData.Runners",
+                "Microsoft.Azure.HybridData.SecOps.Release",
+                "Microsoft.Azure.HybridData.SharedDataServices",
+                "Microsoft.Azure.HybridData.SqlOpsMcpService",
+                "Microsoft.Azure.HybridData.SqlVmLicensingStorage",
+                "Microsoft.Azure.HybridData.TelemetryIntelligence.AppTelemetryExternal",
+                "Microsoft.Azure.HybridData.TelemetryIntelligence.ArcEnabledServer",
+                "Microsoft.Azure.HybridData.TelemetryIntelligence.DefenderForSQL",
+                "Microsoft.Azure.HybridData.TelemetryIntelligence.Scrapy",
+                "Microsoft.Azure.HybridData.TelemetryIntelligence.StreamProcessing",
+                "Microsoft.Azure.HybridData.UsageProcessing"
+            },
+            'Service Group'[service_group]
+        )
+    VAR _Core =
+        SUMMARIZECOLUMNS(
+            'Regional Deployment'[region],
+            _ServiceGroupFilter,
+            "Average Versions Behind", [Average Versions Behind],
+            "Worst Versions Behind", [Worst Versions Behind],
+            "Drifted Deployments",
+                CALCULATE(
+                    COUNTROWS('Regional Deployment'),
+                    'Regional Deployment'[is_drifted] = TRUE()
+                )
+        )
+    VAR _TopRegions =
+        TOPN(
+            15,
+            _Core,
+            [Average Versions Behind], DESC,
+            [Worst Versions Behind], DESC,
+            'Regional Deployment'[region], ASC
+        )
+
+EVALUATE
+    _TopRegions
+ORDER BY
+    [Average Versions Behind] DESC,
+    [Worst Versions Behind] DESC,
+    'Regional Deployment'[region] ASC
