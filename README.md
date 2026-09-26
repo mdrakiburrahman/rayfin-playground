@@ -33,7 +33,7 @@ npx rayfin up
 
 That uses your JWT and this thing to deploy to Fabric:
 
-```
+```text
 /workspaces/rayfin-playground/hello-world/rayfin/.deployments.json
 ```
 
@@ -54,6 +54,8 @@ npm create @microsoft/rayfin@latest -- "hello-semantic-model" --template dataapp
 cd hello-semantic-model
 npx rayfin dev
 ```
+
+> And same as above, `npx rayfin up` to deploy to production.
 
 ## Dev and Prod workflows
 
